@@ -16,7 +16,8 @@ Page({
     currentIcon: '',
     // 当前的位置
     currentPositon: 3,
-    iconList: [`https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl1/1077-8a0e2ac1-0e3a-4a45-a839-785edfd61ae0.png`, `https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl2/1077-6b658e64-7844-4f9e-8292-7dbc3ba7fc03.png`, `https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl1/1077-4cc798fd-3475-4c5a-9dd2-93c8aafe7358.png`, `https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl2/1077-74d45386-a7ed-438e-8db5-2bce22a67ccb.png`, `https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl1/1077-f17cd145-ce44-46bd-beeb-72794029b4e6.png`],
+    // `/images/lv1.png`, `/images/lv2.png`, `/images/lv3.png`
+    iconList: [`https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl2/1077-d66e5fab-85a8-4f47-a058-1fe2159b4e20.png`, `https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl1/1077-e81d44eb-c460-452b-b2e1-ec449dbde879.png`, `https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl2/1077-86d0ff10-0205-4f53-85b4-6671f3ae2742.png`],
     photo: true,
     customModal: false
   },
@@ -252,11 +253,13 @@ Page({
     ctx.drawImage(tempAvatar, 0 * multiple, 0 * multiple, 300 * multiple, 300 * multiple)
     ctx.restore()
     // 一下300就是300rpx
-    let iconSize = 110
+    let iconSizeW = 140
+    let iconSizeH = 50
+
     let dx = 0,
       dy = 0,
-      dw = iconSize,
-      dh = iconSize
+      dw = iconSizeW,
+      dh = iconSizeH
     switch (parseInt(position)) {
       case 0:
         dx = 0, dy = 0
@@ -268,7 +271,8 @@ Page({
         dx = 0, dy = 190
         break;
       case 3:
-        dx = 190, dy = 190
+        dx = 188, dy = 260
+        // dx = 158, dy = 220
         break;
     }
     ctx.drawImage(tempIcon, dx * multiple, dy * multiple, dw * multiple, dh * multiple)

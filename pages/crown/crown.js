@@ -16,7 +16,7 @@ Page({
     currentIcon: '',
     // 当前的位置
     currentPositon: 3,
-    iconList: [`https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl1/1077-8a0e2ac1-0e3a-4a45-a839-785edfd61ae0.png`, `https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl2/1077-6b658e64-7844-4f9e-8292-7dbc3ba7fc03.png`, `https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl1/1077-4cc798fd-3475-4c5a-9dd2-93c8aafe7358.png`, `https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl2/1077-74d45386-a7ed-438e-8db5-2bce22a67ccb.png`, `https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl1/1077-f17cd145-ce44-46bd-beeb-72794029b4e6.png`],
+    iconList: [`https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl1/1077-831c2576-08d1-4636-983e-9bd074af2088.png`, `https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl1/1077-b52eac1a-4a92-4008-b725-4087791a0cc0.png`, `https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl2/1077-2a5229d6-d61d-41c6-96cb-3ee6d5682e4b.png`, `https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl1/1077-30003beb-9573-4a16-a8e1-73b101f63f1f.png`,`https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl2/1077-7987c002-be5c-462e-aaf4-10b068c06289.png`,`https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl1/1077-89820b89-3c7c-49d4-9fc7-fb3e192a8287.png`,`https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl2/1077-88413c9b-ddf7-4f58-a843-060ebaf599fb.png`,],
     photo: true,
     customModal: false
   },
@@ -252,11 +252,13 @@ Page({
     ctx.drawImage(tempAvatar, 0 * multiple, 0 * multiple, 300 * multiple, 300 * multiple)
     ctx.restore()
     // 一下300就是300rpx
-    let iconSize = 110
+    let iconSizeW = 80
+    let iconSizeH = 60
+
     let dx = 0,
       dy = 0,
-      dw = iconSize,
-      dh = iconSize
+      dw = iconSizeW,
+      dh = iconSizeH
     switch (parseInt(position)) {
       case 0:
         dx = 0, dy = 0
@@ -268,7 +270,7 @@ Page({
         dx = 0, dy = 190
         break;
       case 3:
-        dx = 190, dy = 190
+        dx = 220, dy = 245
         break;
     }
     ctx.drawImage(tempIcon, dx * multiple, dy * multiple, dw * multiple, dh * multiple)

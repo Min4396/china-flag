@@ -1,6 +1,5 @@
-# 头像加国旗
+# 头像加V
 
-热烈庆祝祖国70周年华诞
+头像加国旗，国徽，人民币，qqvip，微博大v，b站lv6等级
 
-欢迎扫码体验
-![小程序二维码](https://github.com/JFiscome/china-flag/blob/master/gh_070215f23f74_860.jpg)
+

@@ -1,6 +1,8 @@
 {
   "pages": [
+    "pages/vip/vip",
     "pages/nation/nation",
+    "pages/crown/crown",
     "pages/index/index",
     "pages/logs/logs"
   ],
@@ -9,6 +11,32 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [ 
+      {
+        "pagePath": "pages/vip/vip",
+        "iconPath": "images/vip.png",
+        "selectedIconPath": "images/vip.png",
+        "text": "加VIP"
+      },
+      {
+        "pagePath": "pages/nation/nation",
+        "iconPath": "images/guoqi.png",
+        "selectedIconPath": "images/guoqi.png",
+        "text": "加国旗"
+      },
+      {
+        "pagePath": "pages/crown/crown",
+        "iconPath": "images/hg.png",
+        "selectedIconPath": "images/hg.png",
+        "text": "加皇冠"
+      }
+    ]
   },
   "sitemapLocation": "sitemap.json"
 }
