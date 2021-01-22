@@ -218,19 +218,20 @@ Page({
 
 
   canvasDrawImage(callback) {
-    let that = this
+    let that = this;
     // 获取两个数据
     let icon = that.data.currentIcon,
       avatar = that.data.avatar,
       position = that.data.currentPositon
-
     // 下载图标，获取头像信息
     wx.promisify('downloadFile')({
       url: icon
     }).then(iconRes => {
+      console.log("iconRes", iconRes);
       wx.promisify('getImageInfo')({
-        src: avatar
+        src: avatar.replace('https://thirdwx.qlogo.cn', 'https://wx.qlogo.cn')
       }).then(avatarRes => {
+        console.log("avatarRes", avatarRes);
         let tempAvatar = avatarRes.path
         let tempIcon = iconRes.tempFilePath
         that.__picture(tempIcon, tempAvatar, position, (image) => {

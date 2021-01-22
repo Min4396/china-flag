@@ -3,6 +3,7 @@
     "pages/vip/vip",
     "pages/nation/nation",
     "pages/crown/crown",
+    "pages/joker/joker",
     "pages/index/index",
     "pages/logs/logs"
   ],
@@ -29,6 +30,12 @@
         "iconPath": "images/guoqi.png",
         "selectedIconPath": "images/guoqi.png",
         "text": "加国旗"
+      },
+      {
+        "pagePath": "pages/joker/joker",
+        "iconPath": "images/xclogo.png",
+        "selectedIconPath": "images/xclogo.png",
+        "text": "加小丑"
       },
       {
         "pagePath": "pages/crown/crown",

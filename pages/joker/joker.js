@@ -16,7 +16,7 @@ Page({
     currentIcon: '',
     // 当前的位置
     currentPositon: 3,
-    iconList: [`https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl1/1077-8a0e2ac1-0e3a-4a45-a839-785edfd61ae0.png`, `https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl2/1077-6b658e64-7844-4f9e-8292-7dbc3ba7fc03.png`, `https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl1/1077-4cc798fd-3475-4c5a-9dd2-93c8aafe7358.png`, `https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl2/1077-74d45386-a7ed-438e-8db5-2bce22a67ccb.png`, `https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl1/1077-f17cd145-ce44-46bd-beeb-72794029b4e6.png`],
+    iconList: [`https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl2/1077-29e86108-bb61-4b12-8ce7-2ef9063dad73.png`, `https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl1/1077-0ea05951-1c16-41af-a08f-0e17b94f2cd2.png`, `https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl1/1077-8715a974-6a82-4ca3-b48a-34e6bcec2b4f.png`, `https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl2/1077-02031597-3daf-402b-9167-205709ef2563.png`],
     photo: true,
     customModal: false
   },
@@ -189,6 +189,7 @@ Page({
     })
     that.canvasDrawImage((image) => {
       wx.promisify('getSetting')().then(setRes => {
+        console.log("setRes",setRes)
         if (setRes.authSetting['scope.writePhotosAlbum'] !== false) {
           wx.promisify('saveImageToPhotosAlbum')({
             filePath: image
@@ -222,6 +223,7 @@ Page({
     let icon = that.data.currentIcon,
       avatar = that.data.avatar,
       position = that.data.currentPositon
+
     // 下载图标，获取头像信息
     wx.promisify('downloadFile')({
       url: icon
@@ -251,11 +253,13 @@ Page({
     ctx.drawImage(tempAvatar, 0 * multiple, 0 * multiple, 300 * multiple, 300 * multiple)
     ctx.restore()
     // 一下300就是300rpx
-    let iconSize = 110
+    let iconSizeW = 200
+    let iconSizeH = 175
+
     let dx = 0,
       dy = 0,
-      dw = iconSize,
-      dh = iconSize
+      dw = iconSizeW,
+      dh = iconSizeH
     switch (parseInt(position)) {
       case 0:
         dx = 0, dy = 0
@@ -267,7 +271,7 @@ Page({
         dx = 0, dy = 190
         break;
       case 3:
-        dx = 190, dy = 190
+        dx = 50, dy = 55
         break;
     }
     ctx.drawImage(tempIcon, dx * multiple, dy * multiple, dw * multiple, dh * multiple)

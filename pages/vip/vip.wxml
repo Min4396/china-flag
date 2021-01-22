@@ -33,7 +33,7 @@
     </view>
   </view>
   <view class="custom-modal-container" wx:if="{{customModal}}">
-    <!-- <image src="/images/my-china.png" class="custom-modal-image"></image> -->
+    <image src="/images/share1.png" class="custom-modal-image"></image>
     <view class="custom-button-container">
       <button class="custom-button" bind:tap="customModalCancel" data-status="0">下次再说</button>
       <button class="custom-button concat-customer" open-type="share">推荐给好友</button>

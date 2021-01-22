@@ -228,7 +228,7 @@ Page({
       url: icon
     }).then(iconRes => {
       wx.promisify('getImageInfo')({
-        src: avatar
+        src: avatar.replace('https://thirdwx.qlogo.cn', 'https://wx.qlogo.cn')
       }).then(avatarRes => {
         let tempAvatar = avatarRes.path
         let tempIcon = iconRes.tempFilePath
