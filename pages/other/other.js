@@ -8,12 +8,16 @@ Page({
 
   },
 
-  goAtm() {
-    // wx.navigateTo({
-    //   url: 'url',
-    // })
+  goJoker() {
+    wx.navigateTo({
+      url: '../joker/joker',
+    })
   },
-  goSchool() {},
+  goSchool() {
+    wx.navigateTo({
+      url: '../school/school',
+    })
+  },
   goNation() {
     console.log('bbb');
     wx.navigateTo({

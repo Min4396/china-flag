@@ -1,7 +1,7 @@
 <!--pages/other/other.wxml-->
 <view class="main">
     <view class="btns">  
-      <button class="btn btn1" bindtap="goAtm">加奥特曼</button>
+      <button class="btn btn1" bindtap="goJoker">加小丑</button>
       <button class="btn btn2" bindtap="goSchool">加校徽</button>
       <button class="btn btn3" bindtap="goNation">加国旗</button>
       <button class="btn btn4" bindtap="goCrown">加皇冠</button>

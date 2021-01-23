@@ -5,6 +5,8 @@
     "pages/crown/crown",
     "pages/lol/lol",
     "pages/king/king",
+    "pages/atm/atm",
+    "pages/school/school",
     "pages/other/other",
     "pages/joker/joker",
     "pages/index/index",
@@ -30,15 +32,15 @@
       },
       {
         "pagePath": "pages/king/king",
-        "iconPath": "images/ry_.png",
-        "selectedIconPath": "images/ry_.png",
+        "iconPath": "images/ry.png",
+        "selectedIconPath": "images/ry.png",
         "text": "加王者"
       },
       {
-        "pagePath": "pages/joker/joker",
-        "iconPath": "images/xclogo.png",
-        "selectedIconPath": "images/xclogo.png",
-        "text": "加小丑"
+        "pagePath": "pages/atm/atm",
+        "iconPath": "images/atm.png",
+        "selectedIconPath": "images/atm.png",
+        "text": "加奥特曼"
       },
       {
         "pagePath": "pages/lol/lol",
