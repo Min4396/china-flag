@@ -3,6 +3,9 @@
     "pages/vip/vip",
     "pages/nation/nation",
     "pages/crown/crown",
+    "pages/lol/lol",
+    "pages/king/king",
+    "pages/other/other",
     "pages/joker/joker",
     "pages/index/index",
     "pages/logs/logs"
@@ -26,10 +29,10 @@
         "text": "加VIP"
       },
       {
-        "pagePath": "pages/nation/nation",
-        "iconPath": "images/guoqi.png",
-        "selectedIconPath": "images/guoqi.png",
-        "text": "加国旗"
+        "pagePath": "pages/king/king",
+        "iconPath": "images/ry_.png",
+        "selectedIconPath": "images/ry_.png",
+        "text": "加王者"
       },
       {
         "pagePath": "pages/joker/joker",
@@ -38,10 +41,16 @@
         "text": "加小丑"
       },
       {
-        "pagePath": "pages/crown/crown",
-        "iconPath": "images/hg.png",
-        "selectedIconPath": "images/hg.png",
-        "text": "加皇冠"
+        "pagePath": "pages/lol/lol",
+        "iconPath": "images/lol.png",
+        "selectedIconPath": "images/lol.png",
+        "text": "加段位"
+      },
+      {
+        "pagePath": "pages/other/other",
+        "iconPath": "images/other.png",
+        "selectedIconPath": "images/other.png",
+        "text": "更多"
       }
     ]
   },

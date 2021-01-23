@@ -1,8 +1,9 @@
 /* pages/nation/nation.wxss */
-page{
+page {
   background-color: antiquewhite;
 }
-.container{
+
+.container {
   width: 100%;
   height: 100%;
   display: flex;
@@ -10,13 +11,13 @@ page{
   align-items: center;
 }
 
-.get-button{
+.get-button {
   margin-top: 240rpx;
-  margin-bottom:180rpx;
+  margin-bottom: 180rpx;
   width: 60%;
 }
 
-.avatar-container{
+.avatar-container {
   width: 300rpx;
   height: 300rpx;
   position: relative;
@@ -24,20 +25,20 @@ page{
   display: flex;
   align-items: center;
   background-color: white;
-  border-radius:10rpx;
+  border-radius: 10rpx;
   overflow: hidden;
   margin-top: 200rpx;
   margin-bottom: 40rpx;
 }
 
-.avatar-container-click{
+.avatar-container-click {
   width: 300rpx;
   height: 300rpx;
   margin-top: 200rpx;
   margin-bottom: 40rpx;
 }
 
-.avatar{
+.avatar {
   width: 280rpx;
   height: 280rpx;
   border-radius: 28rpx;
@@ -45,41 +46,51 @@ page{
   margin: auto;
 }
 
-.current-icon{
+.current-icon {
   position: absolute;
 }
-.current-icon-0{
+
+.current-icon-0 {
   top: 0rpx;
   left: 0rpx;
 }
 
-.current-icon-1{
+.current-icon-1 {
   top: 0rpx;
   left: 190rpx;
 }
 
-.current-icon-2{
+.current-icon-2 {
   top: 190rpx;
   left: 0rpx;
 }
 
-.current-icon-3{
-  top: 190rpx;
-  left: 190rpx;
+.current-icon-3 {
+  top: 230rpx;
+  left: 210rpx;
 }
 
+.icon-list-box {
+  display: flex;
+  width: 90%;
+  overflow: scroll;
+  overflow-y: hidden;
+  height: 120rpx;
+  flex-direction: row;
+}
 
-.icon-list{
+.icon-list {
   margin-top: 20rpx;
-  width: 100%;
+  /* width: 100%; */
   height: 120rpx;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+
 }
 
-.buttons-pos-container{
+.buttons-pos-container {
   width: 680rpx;
   display: flex;
   margin-top: 100rpx;
@@ -88,7 +99,7 @@ page{
   margin-bottom: 30rpx;
 }
 
-.position-button{
+.position-button {
   width: 120rpx;
   height: 80rpx;
   line-height: 80rpx;
@@ -100,17 +111,20 @@ page{
   font-size: 36rpx;
 }
 
-.icon-image{
-  width: 110rpx;
-  height: 110rpx;
+.icon-image {
+  width: 80rpx;
+  height: 60rpx;
+}
+.icon-padding {
+  margin-right: 20rpx;
 }
 
-.s-button{
+.s-button {
   width: 80%;
   margin-top: 20rpx;
 }
 
-.bottom-button{
+.bottom-button {
   margin-bottom: 100rpx;
 }
 
@@ -130,14 +144,14 @@ page{
 }
 
 
-.my-canvas{
+.my-canvas {
   width: 300rpx;
   height: 300rpx;
   background-color: aquamarine;
   margin-top: 50rpx;
 }
 
-.back{
+.back {
   width: 100%;
   height: 100%;
   position: fixed;
@@ -171,20 +185,20 @@ page{
   justify-content: space-between;
 }
 
-.custom-modal-image{
+.custom-modal-image {
   width: 550rpx;
   height: 550rpx;
   overflow: hidden;
 }
 
-.custom-text{
+.custom-text {
   width: 100%;
   height: 60rpx;
   line-height: 60rpx;
-	font-family: PingFang-SC-Bold;
-	font-size: 30rpx;
-	font-weight: normal;
-	font-stretch: normal;
+  font-family: PingFang-SC-Bold;
+  font-size: 30rpx;
+  font-weight: normal;
+  font-stretch: normal;
   color: #333333;
   text-align: center;
 }
@@ -229,25 +243,27 @@ page{
   background-color: rgba(0, 0, 0, 0);
   border-radius: 0rpx;
 }
+
 .concat-customer {
   color: #c21f3a;
   border-left: 2rpx solid #ebebeb;
 }
 
-button::after{
-  border:none;
+button::after {
+  border: none;
 }
 
-.button-container{
+.button-container {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   margin-bottom: 120rpx;
+  margin-top: 120rpx;
 }
 
-.button-container-line{
+.button-container-line {
   margin-top: 30rpx;
   width: 100%;
   display: flex;
@@ -255,13 +271,8 @@ button::after{
   justify-content: space-around;
 }
 
-.new-button{
+.new-button {
   width: 70%;
   border-radius: 98rpx;
   font-size: 36rpx;
-  background-color: #d91a07;
-  color: #fff;
 }
-
-
-
