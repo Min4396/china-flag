@@ -16,7 +16,7 @@ Page({
     currentIcon: '',
     // 当前的位置
     currentPositon: 3,
-    iconList: [`https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl1/1077-e86789f9-d450-43ee-ae46-226c17063e15.png`,`https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl2/1077-62fad04d-ab55-4a44-b393-51d99c621d48.png`,`https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl1/1077-a962f6f7-6b9f-4756-91d1-a130be16fae8.png`,`https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl2/1077-5d2f9f8b-a943-455a-87da-724c42caeaeb.png`,`https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl1/1077-5ee0d0b6-bbe6-424f-a90a-241685ea1203.png`,`https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl2/1077-c380bda6-d91d-4ed2-a4c9-28cb8786b106.png`,],
+    iconList: [`https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl1/1077-953b5829-acc6-43f2-9bcd-f6fdb40f95a6.png`,`https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl2/1077-62fad04d-ab55-4a44-b393-51d99c621d48.png`,`https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl2/1077-96921012-2ea9-4972-90cf-98c1cda63623.png`,`https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl1/1077-95c73fab-8645-4722-99ee-1fd643f831eb.png`,`https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl2/1077-85180c56-9d1a-40b3-b68c-c21ed50cc95c.png`,`https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl2/1077-c380bda6-d91d-4ed2-a4c9-28cb8786b106.png`,],
     photo: true,
     customModal: false
   },
@@ -149,7 +149,12 @@ Page({
   },
 
   chooseIcon(event) {
+    console.log("event",event);
     let icon = event.currentTarget.dataset.image
+    wx.previewImage({
+      current: icon, // 当前显示图片的http链接
+      urls: [icon] // 需要预览的图片http链接列表
+    })
     console.log({
       icon
     })

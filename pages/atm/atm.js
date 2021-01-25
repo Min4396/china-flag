@@ -16,7 +16,7 @@ Page({
     currentIcon: '',
     // 当前的位置
     currentPositon: 3,
-    iconList: [`https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl1/1077-96007dd1-3e21-44b1-a293-faf110be37a4.png`,`https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl2/1077-b385527d-60ea-4bff-bfdc-53afdf317d95.png`,`https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl1/1077-4bda11bf-cc2c-448a-9d72-1f4a2320a5d7.png`,`https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl2/1077-b74d0292-785b-49d0-a6ca-70373012e3ce.png`,`https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl1/1077-72a0b7cd-f4f1-4e33-b559-7ce16d18e51a.png`,`https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl2/1077-e8e08b29-0312-4abf-83c5-2aa6407e3564.png`,`https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl1/1077-54becb33-0ec9-4436-9a91-09d8085d7dcc.png`,`https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl2/1077-ba00021c-ba2c-47c6-a533-72b06e89ca38.png`,],
+    iconList: [`https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl1/1077-96007dd1-3e21-44b1-a293-faf110be37a4.png`,`https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl2/1077-b385527d-60ea-4bff-bfdc-53afdf317d95.png`,`https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl1/1077-02fbab3a-257c-4373-aa0e-ba65dff5185d.png`,`https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl2/1077-b74d0292-785b-49d0-a6ca-70373012e3ce.png`,`https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl1/1077-72a0b7cd-f4f1-4e33-b559-7ce16d18e51a.png`,`https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl2/1077-e8e08b29-0312-4abf-83c5-2aa6407e3564.png`,`https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl1/1077-54becb33-0ec9-4436-9a91-09d8085d7dcc.png`,`https://swz-common-files.oss-cn-shenzhen.aliyuncs.com/VimMaintenanceRecord/maintenanceChecklistUrl2/1077-ba00021c-ba2c-47c6-a533-72b06e89ca38.png`,],
     photo: true,
     customModal: false
   },
@@ -150,6 +150,10 @@ Page({
 
   chooseIcon(event) {
     let icon = event.currentTarget.dataset.image
+    wx.previewImage({
+      current: icon, // 当前显示图片的http链接
+      urls: [icon] // 需要预览的图片http链接列表
+    })
     console.log({
       icon
     })
@@ -287,7 +291,7 @@ Page({
         destWidth: 600 * multiple,
         destHeight: 600 * multiple
       }).then(info => {
-        console.log({
+        console.log("info",{
           info
         })
         return callback(info.tempFilePath)
