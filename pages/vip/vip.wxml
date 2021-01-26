@@ -4,10 +4,12 @@
     <image src="{{currentIcon}}" class="current-icon current-icon-{{currentPositon}} icon-image" />
   </view>
   <view class="icon-list-box">
-  <view class="icon-list">
-    <image src="{{item}}" wx:for="{{iconList}}" wx:key="index" class="icon-image" bind:tap="chooseIcon" data-image="{{item}}" />
+    <view class="icon-list">
+      <image src="{{item}}" wx:for="{{iconList}}" wx:key="index" class="icon-image" bind:tap="chooseIcon"
+        bind:longpress="longpress" data-image="{{item}}" />
+    </view>
   </view>
-</view>
+  <view class="icon-tip">长按0.35秒预览图片</view>
   <!-- <view class="buttons-pos-container">
     <view bind:tap="choosePosition" data-position="1" class="position-button">右上</view>
     <view bind:tap="choosePosition" data-position="3" class="position-button">右下</view>
@@ -19,7 +21,8 @@
   </view> -->
   <view class="button-container">
     <view class="button-container-line">
-      <button open-type="getUserInfo" type="primary" bindgetuserinfo="onGetUserInfo" class="new-button" wx:if="{{!authorized}}">
+      <button open-type="getUserInfo" type="primary" bindgetuserinfo="onGetUserInfo" class="new-button"
+        wx:if="{{!authorized}}">
         获取微信头像
       </button>
       <button open-type="share" type="primary" class="new-button" type="primary" wx:else="{{authorized}}">
@@ -27,7 +30,8 @@
       </button>
     </view>
     <view class="button-container-line">
-      <button bind:tap="saveImage" open-type="{{photo?'':'openSetting'}}" bindopensetting="onSuccessOpenSetting" class="new-button" type="warn">
+      <button bind:tap="saveImage" open-type="{{photo?'':'openSetting'}}" bindopensetting="onSuccessOpenSetting"
+        class="new-button" type="warn">
         保存图片
       </button>
     </view>

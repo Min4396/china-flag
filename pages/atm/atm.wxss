@@ -87,7 +87,11 @@ page {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-
+}
+.icon-tip {
+  color: rgba(255, 0, 0, 0.884);
+  font-size: 32rpx;
+  margin-top: 20rpx;
 }
 
 .buttons-pos-container {
