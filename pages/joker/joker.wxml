@@ -8,7 +8,7 @@
     <image src="{{item}}" wx:for="{{iconList}}" wx:key="index" class="icon-image" bind:tap="chooseIcon" bind:longpress="longpress" data-image="{{item}}" />
   </view>
 </view>
-<view class="icon-tip">长按0.35秒预览图片</view>
+<view class="icon-tip">长按0.35秒预览候选图片</view>
   <!-- <view class="buttons-pos-container">
     <view bind:tap="choosePosition" data-position="1" class="position-button">右上</view>
     <view bind:tap="choosePosition" data-position="3" class="position-button">右下</view>
